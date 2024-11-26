@@ -2,8 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { MDXProvider } from '@mdx-js/react';
 import CodeExecutor from '../CodeExecutor/CodeExecutor';
-import mdx from '../../data/posts'; // 게시물 데이터를 가져옴
 
+const mdx = {
+  1: () => import('../../posts/post1.mdx'),
+  2: () => import('../../posts/post2.mdx'),
+  3: () => import('../../posts/post3.mdx'),
+};
 // MDXProvider에 전달할 커스텀 컴포넌트 등록
 const components = {
   CodeExecutor,

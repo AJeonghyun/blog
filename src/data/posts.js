@@ -5,11 +5,5 @@ const posts = [
   { id: 3, title: '세 번째 게시물', date: '2024-11-21', category: '학교' },
 ];
 
-const mdx = {
-  1: () => import('../posts/post1.mdx'),
-  2: () => import('../posts/post2.mdx'),
-  3: () => import('../posts/post3.mdx'),
-};
-
 // 내보내기
 export default posts;
