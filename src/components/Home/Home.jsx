@@ -1,6 +1,6 @@
 import React from 'react';
 import Posting from './Posting'; // PostList 컴포넌트 임포트
-import NewSection from './NewSection'; // NewSection 컴포넌트 임포트
+import Todo from './Todo'; // NewSection 컴포넌트 임포트
 import posts from '../../data/posts';
 const Home = ({}) => {
   // 게시물 데이터
@@ -16,7 +16,7 @@ const Home = ({}) => {
 
       {/* NewSection 섹션 */}
       <div className="w-full">
-        <NewSection />
+        <Todo />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="bg-lightgray dark:border-t dark:border-stone-900 dark:bg-black">
-      <div className="horizontal-pad flex flex-col items-center justify-end gap-3 py-1 sm:flex-row">
+      <div className="horizontal-pad flex flex-col items-center justify-center gap-3 py-1 sm:flex-row">
         <div className="flex gap-3">
           <a
             href="https://github.com/AJeonghyun"

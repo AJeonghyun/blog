@@ -26,7 +26,6 @@ const Header = () => {
             <br />
             현재 한동대학교에 다니고 있습니다.
             <br />
-            
           </p>
         </div>
 
@@ -42,14 +41,6 @@ const Header = () => {
           </li>
           <li>
             <Link
-              to="/about"
-              className="text-gray-800 dark:text-white hover:text-blue-500 dark:hover:text-blue-300 transition-colors"
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
               to="/posts"
               className="text-gray-800 dark:text-white hover:text-blue-500 dark:hover:text-blue-300 transition-colors"
             >
@@ -58,10 +49,10 @@ const Header = () => {
           </li>
           <li>
             <Link
-              to="/contact"
+              to="/about"
               className="text-gray-800 dark:text-white hover:text-blue-500 dark:hover:text-blue-300 transition-colors"
             >
-              Contact
+              About
             </Link>
           </li>
         </ul>

@@ -6,8 +6,8 @@ const Posting = ({ posts }) => {
   return (
     <section className="pl-20 pr-20 pt-[56px] sm:pt-[64px] md:pt-[72px] lg:flex-row lg:pt-[80px]">
       <div className="flex items-center justify-between mb-10">
-        <h3 className="text-4xl font-bold text-gray-800 dark:text-white">
-          게시물 목록
+        <h3 className="text-5xl font-bold text-gray-800 dark:text-white">
+          게시물
         </h3>
         {/* "모든 글 보기" 버튼 */}
         <Link
