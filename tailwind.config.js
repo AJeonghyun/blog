@@ -1,28 +1,25 @@
 /** @type {import('tailwindcss').Config} */
+import scrollbarHide from 'tailwind-scrollbar-hide';
+import typography from '@tailwindcss/typography';
+
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx,md,mdx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx,md,mdx}'],
   theme: {
     extend: {
       typography: {
         DEFAULT: {
           css: {
             'h1, h2, h3, h4, h5, h6': {
-              marginTop: '0.5rem',  // Adjusts the top margin of headings
-              marginBottom: '0.5rem',  // Adjusts the bottom margin of headings
+              marginTop: '0.5rem',
+              marginBottom: '0.5rem',
             },
-            'p': {
-              marginBottom: '1rem', // Adjusts space below paragraphs
-            }
-          }
-        }
-      }
+            p: {
+              marginBottom: '1rem',
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [
-    require("tailwind-scrollbar-hide"),
-    require('@tailwindcss/typography'),
-  ],
-}
+  plugins: [scrollbarHide, typography],
+};
