@@ -10,13 +10,13 @@ const posts = [
     id: 2,
     title: '두 번째 게시물',
     date: '2024-11-22',
-    category: '개발',
+    category: 'CS',
   },
   {
     id: 3,
     title: '세 번째 게시물',
     date: '2024-11-21',
-    category: '학교',
+    category: '프로젝트',
   },
 ];
 
