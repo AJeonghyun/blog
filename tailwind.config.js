@@ -12,14 +12,10 @@ export default {
             'h1, h2, h3, h4, h5, h6': {
               marginTop: '0.5rem',
               marginBottom: '0.5rem',
+              textAlign: 'left',
             },
             p: {
               marginBottom: '1rem',
-            },
-            pre: {
-              maxWidth: 'none', // 코드 블록의 최대 너비 제거
-              whiteSpace: 'pre-wrap', // 줄바꿈 허용
-              wordBreak: 'break-word', // 긴 코드 줄 브레이크
             },
           },
         },

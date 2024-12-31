@@ -45,8 +45,10 @@ const PostPage = () => {
   const MDXContentComponent = mdxContent; // 동적으로 로드된 MDX 콘텐츠를 설정
 
   return (
-    <div className="p-8 flex flex-col items-center w-[90%] max-w-screen-2xl mx-auto prose prose-xl prose-code:max-w-full prose-pre:max-w-full dark:prose-invert dark:bg-black">
-      <MDXContentComponent /> {/* MDX 콘텐츠 렌더링 */}
+    <div className="p-8 flex flex-col items-center w-[90%] max-w-screen-2xl mx-auto">
+      <div className="prose prose-xl text-left w-full prose-code:max-w-none prose-pre:w-[50rem] prose-pre:overflow-x-auto dark:prose-invert dark:bg-black">
+        <MDXContentComponent /> {/* MDX 콘텐츠 렌더링 */}
+      </div>
     </div>
   );
 };
