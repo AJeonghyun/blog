@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { MDXProvider } from '@mdx-js/react';
-import CodeExecutor from '../CodeExecutor/CodeExecutor';
 import mdx from '../../data/mdx';
-
-// MDXProvider에 전달할 커스텀 컴포넌트 등록
-const components = {
-  CodeExecutor,
-};
 
 const PostPage = () => {
   const { id } = useParams(); // URL 파라미터에서 'id' 값을 가져옴
@@ -52,10 +45,8 @@ const PostPage = () => {
   const MDXContentComponent = mdxContent; // 동적으로 로드된 MDX 콘텐츠를 설정
 
   return (
-    <div className="p-8 flex flex-col items-center w-full max-w-screen-lg mx-auto prose dark:prose-invert dark:bg-black">
-      <MDXProvider components={components}>
-        <MDXContentComponent /> {/* MDX 콘텐츠 렌더링 */}
-      </MDXProvider>
+    <div className="p-8 flex flex-col items-center w-[90%] max-w-screen-2xl mx-auto prose prose-xl prose-code:max-w-full prose-pre:max-w-full dark:prose-invert dark:bg-black">
+      <MDXContentComponent /> {/* MDX 콘텐츠 렌더링 */}
     </div>
   );
 };
