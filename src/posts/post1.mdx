@@ -1,5 +1,37 @@
 import CodeExecutor from '../components/CodeExecutor/CodeExecutor';
 
-# This is a H1
+[바킹독 실전 알고리즘 강의](https://youtube.com/playlist?list=PLtqbFd2VIQv4O6D6l9HcD732hdrnYb6CY&si=n8_QIvE71rDxra-Y)
 
-<CodeExecutor />
+# 0x02강 - 기초 코드 작성 요령 II
+
+### 1. cin,cout 사용할 때
+
+- ios::sync_with_studio(0),cin_tie(0) 사용하기
+
+### **2. endl은 절대 사용하지말기**
+
+### 입출력 코드 예제
+
+```
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+    int age;
+    cout << "여러분의 나이를 입력해 주세요 : ";
+    cin >> age;
+
+    cout << "여러분의 나이는 " << age << "살 입니다." << endl;
+    return 0;
+
+}
+```
+
+#### iostream : 입출력 클래스, cout/cin 사용하려면 해야함
+
+#### cout << var_output
+
+#### cin >> var_input

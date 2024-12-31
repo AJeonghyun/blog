@@ -1,9 +1,91 @@
-# This is a H1
+![](https://velog.velcdn.com/images/anjeonghyun_0911/post/f40c1d1a-b799-469e-8394-87f669f7b7dd/image.png)
 
-## This is a H2
+## 처음 작성한 코드
 
-## This is a H3
+```
+#include <bits/stdc++.h>
 
-#### This is a H4
+using namespace std;
 
-##### This is a H5
+int arr[10000001];
+int main(void)
+{
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  int n;
+  int x;
+  int num = 0;
+  cin >> n;
+
+  for (int i = 0; i < n; i++)
+    cin >> arr[i];
+
+  cin >> x;
+
+  for(int i=0; i<n-1; i++)
+    for(int j=i+1; j<n; j++)
+      if(arr[i]+arr[j]==x)
+        num++;
+
+
+  cout << num;
+}
+
+```
+
+#### 처음 작성한 코드이다. n의 크기를 생각하지 않고 단순하게 이중 for문을 사용하여 구하려고 했다. 하지만 런타임에러가 발생했다. 시간복잡도가 O(N^2)이기 때문에 에러가 발생한 것 같다.
+
+## 수정한 코드
+
+```
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int arr[10000001];
+bool occur[20000001];
+int main(void)
+{
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  int n;
+  int x;
+  int num = 0;
+  cin >> n;
+
+  for (int i = 0; i < n; i++)
+    cin >> arr[i];
+
+  cin >> x;
+
+  for (int i = 0; i < n; i++)
+  {
+    if (x - arr[i] > 0 && occur[x - arr[i]])
+      num++;
+    occur[arr[i]] = true;
+  }
+
+  cout << num;
+}
+
+```
+
+### 앞의 연습문제처럼 풀어본 코드이다.
+
+#### occur 배열은 입력된 숫자가 이전에 등장했는지 안했는지를 알려주는 역할을 한다.
+
+#### x-arr[i]가 0보다 크고 occur[x-arr[i]]가 true이면 num을 +1 해준다.
+
+#### 그게 아니라면 occur[arr[i]]를 true로 만들어준다.
+
+#### 예를 들어 arr에 [1,2,3,4,5]가 입력이 되었고 x에 6이 입력이 되었다고 가정하자
+
+#### 그러면 i=0일때 x-arr[0] = 6-1 = 5, occur[5] = false이기 때문에 occur[1]이 true가 된다.
+
+#### 다음으로 i=1일때 occur[2]가 true가 되고, i=3일때 occur[3]이 ture가 된다.
+
+#### 그리고 i=3일때 앞서 occur[2] = true이 되었기 때문에 num이 +1이 된다.
+
+#### 이런 과정으로 코드가 동작한다.
+
+### 느낀점 : 계속 브론즈 문제만 풀다가 실버 문제를 풀었는데 생각보다 어렵지 않아 자신감이 생겼다.
