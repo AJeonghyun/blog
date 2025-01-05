@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="bg-lightgray dark:bg-black shadow-md">
       {/* 내비게이션 컨테이너 */}
-      <nav className="flex flex-col items-center py-6">
+      <nav className="flex flex-col items-center py-2">
         {/* 로고 섹션 */}
         <div className="mb-4">
           <img
@@ -22,9 +22,7 @@ const Header = () => {
             무지의 가속팽창
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            안녕하세요 저는 안정현입니다.
-            <br />
-            현재 한동대학교에 다니고 있습니다.
+            행복을 주는 개발자가 되고 싶은 안정현입니다.
             <br />
           </p>
         </div>
